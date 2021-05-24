@@ -1,0 +1,834 @@
+{
+  "id": "railwayarg",
+  "title": {
+    "es": "FC Sarmiento",
+    "en": "FC Sarmiento"
+  },
+  "shortDescription": {
+    "es": "Linea Sarmiento",
+    "en": "Sarmiento Line"
+  },
+  "description": {
+    "es": "Para mejorar el mapeo de infraestructura ferroviaria de la línea Sarmiento en AMBA Argentina, como señales, cambios, etc",
+    "en": "To improve the mapping of railway infrastructure of the Sarmiento line in AMBA Argentina, such as signals, changes, etc."
+  },
+  "language": [
+    "en",
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/2/23/BSicon_BAHN.svg",
+  "version": "0",
+  "startLat": -34.6504,
+  "startLon": -58.78872,
+  "startZoom": 18,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "banderilleros",
+      "name": {
+        "es": "Banderilleros",
+        "en": "cross box"
+      },
+      "minzoom": 14,
+      "overpassTags": {
+        "and": [
+          "railway=crossing_box"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Banderillero",
+          "en": "cross box"
+        },
+        "mappings": []
+      },
+      "description": {
+        "es": "Casilla de banderilleros"
+      },
+      "tagRenderings": [],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Red_flag_waving.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "30,30,center"
+      },
+      "color": {
+        "render": "#00f",
+        "mappings": []
+      },
+      "presets": [
+        {
+          "tags": [
+            "railway=crossing_box",
+            "colour=#0066CC",
+            "operator=Trenes Argentinos",
+            "description=Banderillero"
+          ],
+          "title": {
+            "es": "Casilla de banderillero"
+          }
+        }
+      ]
+    },
+    {
+      "id": "crossings",
+      "name": {
+        "es": "Cruces"
+      },
+      "minzoom": 14,
+      "overpassTags": {
+        "or": [
+          "railway=crossing",
+          "railway=level_crossing"
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "",
+          "es": "Cruces"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "railway=crossing"
+              ]
+            },
+            "then": {
+              "es": "Cruce peatonal"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway=level_crossing"
+              ]
+            },
+            "then": {
+              "es": "Paso a nivel"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Cruces de ferrocarril con caminos."
+      },
+      "tagRenderings": [
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "crossing:bell"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:bell=yes"
+                ]
+              },
+              "then": {
+                "es": "Tiene advertencia sonora"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:bell=no"
+                ]
+              },
+              "then": {
+                "es": "No tiene advertencia sonora"
+              }
+            }
+          ],
+          "question": {
+            "en": "",
+            "es": "¿Tiene advertencia sonora?"
+          },
+          "render": {
+            "es": "{key}"
+          }
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "crossing:light"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:light=yes"
+                ]
+              },
+              "then": {
+                "es": "Tiene advertencia luminosa"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:light=no"
+                ]
+              },
+              "then": {
+                "es": "No tiene advertencia luminosa"
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene advertencia luminosa?"
+          }
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "crossing:saltire"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:saltire=yes"
+                ]
+              },
+              "then": {
+                "es": "Tiene cruz de San Andrés"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:saltire=no"
+                ]
+              },
+              "then": {
+                "es": "No tiene cruz de San Andrés"
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene cruz de San Andrés?"
+          },
+          "condition": {
+            "and": [
+              "railway=level_crossing"
+            ]
+          }
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "crossing:chicane"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:chicane=yes"
+                ]
+              },
+              "then": {
+                "es": "Tiene laberinto"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:chicane=no"
+                ]
+              },
+              "then": {
+                "es": "No tiene laberinto"
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene laberinto?"
+          },
+          "condition": {
+            "and": [
+              "railway=crossing"
+            ]
+          }
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "supervised"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "supervised=yes"
+                ]
+              },
+              "then": {
+                "es": "Tiene banderillero"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "supervised=no"
+                ]
+              },
+              "then": {
+                "es": "No tiene banderillero"
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene banderillero?"
+          }
+        },
+        {
+          "question": {
+            "en": "",
+            "es": "¿Que tipo de barreras tiene?"
+          },
+          "freeform": {
+            "key": "crossing:barrier"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:barrier=half"
+                ]
+              },
+              "then": {
+                "es": "Media barrera"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:barrier=double_half"
+                ]
+              },
+              "then": {
+                "es": "Doble barrera"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:barrier=full"
+                ]
+              },
+              "then": {
+                "es": "Barrera entera"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:barrier=no"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "No tiene barreras."
+              }
+            }
+          ],
+          "condition": {
+            "and": [
+              "railway=level_crossing"
+            ]
+          },
+          "render": {
+            "en": "",
+            "es": "{key}"
+          }
+        },
+        {
+          "freeform": {
+            "key": "crossing"
+          },
+          "render": {
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿El cruce no tiene control?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing=uncontrolled"
+                ]
+              },
+              "then": {
+                "es": "No tiene control"
+              }
+            }
+          ],
+          "condition": {
+            "and": [
+              "crossing:light=no",
+              "crossing:bell=no"
+            ]
+          }
+        },
+        {
+          "question": {
+            "en": "",
+            "es": "¿Cómo se activan las barreras?"
+          },
+          "freeform": {
+            "key": "crossing:activation"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing:activation=automatic"
+                ]
+              },
+              "then": {
+                "es": "Automáticas"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:activation=local"
+                ]
+              },
+              "then": {
+                "es": "Manual por banderillero"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:activation=remote"
+                ]
+              },
+              "then": {
+                "es": "Manual desde cabin"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing:activation=user"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "Las abre el automovilista"
+              }
+            }
+          ],
+          "condition": {
+            "and": [
+              "railway=level_crossing",
+              {
+                "or": [
+                  "crossing:barrier=double_half",
+                  "crossing:barrier=full",
+                  "crossing:barrier=half"
+                ]
+              }
+            ]
+          },
+          "render": {
+            "en": "",
+            "es": "{key}"
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Canadian_Railroad_Crossing_Sign.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "25,25,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": []
+    },
+    {
+      "id": "switches",
+      "name": {
+        "en": "Switches",
+        "es": "Desvíos"
+      },
+      "minzoom": 14,
+      "overpassTags": {
+        "and": [
+          "railway=switch"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Desvío"
+        },
+        "mappings": []
+      },
+      "description": {
+        "es": "Aparatos de vía o cambios aguja del ferrocarril"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Que tipo de desvío es?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:switch="
+                ]
+              },
+              "then": {
+                "es": "Cambio simple"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch=wye"
+                ]
+              },
+              "then": {
+                "es": "Cambio de bifurcación Y"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch=three_way"
+                ]
+              },
+              "then": {
+                "es": "Cambio de 3 vías"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch=single_slip"
+                ]
+              },
+              "then": {
+                "es": "Cambio de unión simple (X)"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch=double_slip"
+                ]
+              },
+              "then": {
+                "es": "Cambio de unión doble (X)"
+              }
+            }
+          ],
+          "freeform": {
+            "key": "railway:switch"
+          }
+        },
+        {
+          "freeform": {
+            "key": "railway:turnout_side"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:turnout_side=right"
+                ]
+              },
+              "then": {
+                "es": "Derecha"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:turnout_side=left"
+                ]
+              },
+              "then": {
+                "es": "Izquierda"
+              }
+            }
+          ],
+          "render": {
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Hacia que lado desvía?"
+          },
+          "condition": {
+            "or": [
+              "railway:switch="
+            ]
+          }
+        },
+        {
+          "freeform": {
+            "key": "railway:switch:electric"
+          },
+          "question": {
+            "es": "¿Es eléctrico?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:switch:electric=yes"
+                ]
+              },
+              "then": {
+                "es": "Es eléctrico"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch:electric=no"
+                ]
+              },
+              "then": {
+                "es": "No es eléctrico"
+              }
+            }
+          ],
+          "render": {
+            "es": "{key}"
+          }
+        },
+        {
+          "freeform": {
+            "key": "railway:switch:local_operated"
+          },
+          "question": {
+            "es": "¿Cómo se acciona?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:switch:local_operated=yes"
+                ]
+              },
+              "then": {
+                "es": "Es operado por cambista"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch:local_operated=no"
+                ]
+              },
+              "then": {
+                "es": "Es operado desde cabín"
+              }
+            }
+          ],
+          "render": {
+            "es": "{key}"
+          }
+        },
+        {
+          "render": {
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Cómo es la configuración de cambios de unión (X)?"
+          },
+          "freeform": {
+            "key": "railway:switch:configuration"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:switch:configuration=inside"
+                ]
+              },
+              "then": {
+                "es": "Agujas internas"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:switch:configuration=outside"
+                ]
+              },
+              "then": {
+                "es": "Agujas externas"
+              }
+            }
+          ],
+          "condition": {
+            "or": [
+              "railway:switch=single_slip",
+              "railway:switch=double_slip"
+            ]
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/5/52/BSicon_eABZg%2B14.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "railway:turnout_side=right",
+                "railway:switch:local_operated!~",
+                "railway:switch:electric!~"
+              ]
+            },
+            "then": {
+              "en": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg",
+              "es": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:turnout_side=left",
+                "railway:switch:local_operated!~",
+                "railway:switch:electric!~"
+              ]
+            },
+            "then": {
+              "es": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg",
+              "en": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:switch=single_slip",
+                "railway:switch:local_operated!~",
+                "railway:switch:electric!~",
+                "railway:switch:configuration!~"
+              ]
+            },
+            "then": {
+              "en": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg",
+              "es": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:switch=double_slip",
+                "railway:switch:local_operated!~",
+                "railway:switch:electric!~",
+                "railway:switch:configuration!~"
+              ]
+            },
+            "then": {
+              "en": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg",
+              "es": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:switch=wye",
+                "railway:switch:local_operated!~",
+                "railway:switch:electric!~"
+              ]
+            },
+            "then": {
+              "en": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg",
+              "es": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "25,25,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": []
+    },
+    {
+      "id": "railwaycrossing",
+      "name": {
+        "en": "Railway crossing",
+        "es": "Cruce ferroviario"
+      },
+      "minzoom": 14,
+      "overpassTags": {
+        "and": [
+          "railway=railway_crossing"
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "Railway crossing",
+          "es": "Cruce ferroviario"
+        }
+      },
+      "description": {
+        "es": "Cruce a nivel de vías sin cambios."
+      },
+      "tagRenderings": [],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/3/3c/BSicon_uv%C3%9CWB.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "23,23,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": []
+    }
+  ],
+  "roamingRenderings": []
+}
