@@ -423,14 +423,14 @@
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:main:deactivated=no",
-			"railway:signal:main:height=normal",
+	    "railway:signal:main:height=normal",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-			"railway:signal:minor:height=medium",
+            "railway:signal:minor:height=medium",
             "railway:signal:shunting=yes",
             "railway:signal:shunting:form=light",
             "railway:signal:shunting:deactivated=no",
-			"railway:signal:shunting:height=dwarf",
+            "railway:signal:shunting:height=dwarf",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
