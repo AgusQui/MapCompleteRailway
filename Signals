@@ -171,22 +171,11 @@
             {
               "if": {
                 "and": [
-                  "railway:signal:main:deactivated=no"
+                  "railway:signal:main:height=normal"
                 ]
               },
               "then": {
-                "es": "La señal está en funcionamiento."
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "railway:signal:main:deactivated=yes"
-                ]
-              },
-              "then": {
-                "en": "",
-                "es": "La señal está desactivada"
+                "es": "Esta señal tiene una altura normal"
               }
             }
           ],
@@ -195,15 +184,15 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Está la señal principal en funcionamiento?"
+            "es": "¿La señal principal tiene una altura normal?"
           },
           "freeform": {
-            "key": "railway:signal:main:deactivated"
+            "key": "railway:signal:main:height"
           },
           "condition": {
             "or": [
-              "railway:signal:main:deactivated=yes",
-              "railway:signal:main:deactivated=no"
+              "railway:signal:position=left",
+              "railway:signal:position=right"
             ]
           }
         },
@@ -212,22 +201,11 @@
             {
               "if": {
                 "and": [
-                  "railway:signal:shunting:deactivated=no"
+                  "railway:signal:shunting:height=dwarf"
                 ]
               },
               "then": {
-                "es": "La señal está en funcionamiento."
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "railway:signal:shunting:deactivated=yes"
-                ]
-              },
-              "then": {
-                "en": "",
-                "es": "La señal está desactivada"
+                "es": "Es una señal enana."
               }
             }
           ],
@@ -236,15 +214,15 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Está la señal de maniobras en funcionamiento?"
+            "es": "¿Es una señal de maniobras enana?"
           },
           "freeform": {
-            "key": "railway:signal:shunting:deactivated"
+            "key": "railway:signal:shunting:height"
           },
           "condition": {
             "or": [
-              "railway:signal:shunting:deactivated=yes",
-              "railway:signal:shunting:deactivated=no"
+              "railway:signal:position=left",
+              "railway:signal:position=right"
             ]
           }
         },
@@ -253,22 +231,11 @@
             {
               "if": {
                 "and": [
-                  "railway:signal:combined:deactivated=no"
+                  "railway:signal:combined:height=normal"
                 ]
               },
               "then": {
-                "es": "La señal está en funcionamiento."
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "railway:signal:combined:deactivated=yes"
-                ]
-              },
-              "then": {
-                "en": "",
-                "es": "La señal está desactivada"
+                "es": "La señal tiene altura normal."
               }
             }
           ],
@@ -277,15 +244,15 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Está la señal combinada en funcionamiento?"
+            "es": "¿La señal combinada tiene una altura normal?"
           },
           "freeform": {
-            "key": "railway:signal:combined:deactivated"
+            "key": "railway:signal:combined:height"
           },
           "condition": {
             "or": [
-              "railway:signal:combined:deactivated=yes",
-              "railway:signal:combined:deactivated=no"
+              "railway:signal:position=left",
+              "railway:signal:position=right"
             ]
           }
         },
@@ -294,22 +261,33 @@
             {
               "if": {
                 "and": [
-                  "railway:signal:route:deactivated=no"
+                  "railway:signal:route:height=normal"
                 ]
               },
               "then": {
-                "es": "La señal está en funcionamiento."
+                "es": "La señal tiene altura normal."
               }
             },
             {
               "if": {
                 "and": [
-                  "railway:signal:route:deactivated=yes"
+                  "railway:signal:route:height=medium"
                 ]
               },
               "then": {
                 "en": "",
-                "es": "La señal está desactivada"
+                "es": "La señal está a media altura"
+              }
+            },
+			{
+              "if": {
+                "and": [
+                  "railway:signal:route:height=dwarf"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "Es una señal enana"
               }
             }
           ],
@@ -318,15 +296,15 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Está la señal de desvío en funcionamiento?"
+            "es": "¿A que altura está la señal de desvío?"
           },
           "freeform": {
-            "key": "railway:signal:route:deactivated"
+            "key": "railway:signal:route:height"
           },
           "condition": {
             "or": [
-              "railway:signal:route:deactivated=yes",
-              "railway:signal:route:deactivated=no"
+              "railway:signal:position=left",
+              "railway:signal:position=right"
             ]
           }
         },
@@ -335,22 +313,33 @@
             {
               "if": {
                 "and": [
-                  "railway:signal:route:minor=no"
+                  "railway:signal:minor:height=normal"
                 ]
               },
               "then": {
-                "es": "La señal está en funcionamiento."
+                "es": "La señal tiene altura normal."
               }
             },
             {
               "if": {
                 "and": [
-                  "railway:signal:minor:deactivated=yes"
+                  "railway:signal:minor:height=medium"
                 ]
               },
               "then": {
                 "en": "",
-                "es": "La señal está desactivada"
+                "es": "La señal está a media altura"
+              }
+            },
+			{
+              "if": {
+                "and": [
+                  "railway:signal:minor:height=dwarf"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "Es una señal enana"
               }
             }
           ],
@@ -359,15 +348,15 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Está la señal de llamada en funcionamiento?"
+            "es": "¿A que altura está la señal de llamada?"
           },
           "freeform": {
-            "key": "railway:signal:minor:deactivated"
+            "key": "railway:signal:minor:height"
           },
           "condition": {
             "or": [
-              "railway:signal:minor:deactivated=yes",
-              "railway:signal:minor:deactivated=no"
+              "railway:signal:position=left",
+              "railway:signal:position=right"
             ]
           }
         }
@@ -434,17 +423,36 @@
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:main:deactivated=no",
+			"railway:signal:main:height=normal"
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-            "railway:signal:minor:deactivated=no",
+			"railway:signal:minor:height=medium",
             "railway:signal:shunting=yes",
             "railway:signal:shunting:form=light",
             "railway:signal:shunting:deactivated=no",
+			"railway:signal:shunting:height=dwarf",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
             "en": "Main & Minor & Shunting signal",
             "es": "Principal, de llamada y de maniobras"
+          }
+        },
+		{
+          "tags": [
+            "railway=signal",
+            "railway:signal:main=yes",
+            "railway:signal:main:form=light",
+            "railway:signal:main:deactivated=no",
+			"railway:signal:main:height=normal"
+            "railway:signal:minor=yes",
+            "railway:signal:minor:form=light",
+			"railway:signal:minor:height=medium",
+            "fixme=pegar a la vía y corregir direction"
+          ],
+          "title": {
+            "en": "Main & Minor",
+            "es": "Principal y de llamada"
           }
         },
         {
