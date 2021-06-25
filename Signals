@@ -175,7 +175,7 @@
                 ]
               },
               "then": {
-                "es": "Esta señal tiene una altura normal"
+                "es": "La señal principal tiene una altura normal"
               }
             }
           ],
@@ -205,7 +205,7 @@
                 ]
               },
               "then": {
-                "es": "Es una señal enana."
+                "es": "La señal de maniobras es enana."
               }
             }
           ],
@@ -235,7 +235,7 @@
                 ]
               },
               "then": {
-                "es": "La señal tiene altura normal."
+                "es": "La señal combinada tiene altura normal."
               }
             }
           ],
@@ -265,7 +265,7 @@
                 ]
               },
               "then": {
-                "es": "La señal tiene altura normal."
+                "es": "La señal de desvío tiene altura normal."
               }
             },
             {
@@ -276,7 +276,7 @@
               },
               "then": {
                 "en": "",
-                "es": "La señal está a media altura"
+                "es": "La señal de desvío está a media altura"
               }
             },
 			{
@@ -287,7 +287,7 @@
               },
               "then": {
                 "en": "",
-                "es": "Es una señal enana"
+                "es": "Es una señal de desvío enana"
               }
             }
           ],
@@ -317,7 +317,7 @@
                 ]
               },
               "then": {
-                "es": "La señal tiene altura normal."
+                "es": "La señal de llamada tiene altura normal."
               }
             },
             {
@@ -328,7 +328,7 @@
               },
               "then": {
                 "en": "",
-                "es": "La señal está a media altura"
+                "es": "La señal de llamada está a media altura"
               }
             },
 			{
@@ -339,7 +339,7 @@
               },
               "then": {
                 "en": "",
-                "es": "Es una señal enana"
+                "es": "Es una señal de llamada enana"
               }
             }
           ],
