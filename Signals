@@ -190,18 +190,18 @@
             "key": "railway:signal:main:height"
           },
           "condition": {
-			"and": [
+            "and": [
               "railway:signal:main=yes",
-               "or": [
-              "railway:signal:position=left",
-              "railway:signal:position=right"
-			  ]
-			  ]
-			  }
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
             ]
           }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -225,13 +225,18 @@
             "key": "railway:signal:shunting:height"
           },
           "condition": {
-            "or": [
-              "railway:signal:position=left",
-              "railway:signal:position=right"
+            "and": [
+              "railway:signal:shunting=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
             ]
           }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -255,13 +260,18 @@
             "key": "railway:signal:combined:height"
           },
           "condition": {
-            "or": [
-              "railway:signal:position=left",
-              "railway:signal:position=right"
+            "and": [
+              "railway:signal:combined=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
             ]
           }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -284,7 +294,7 @@
                 "es": "La señal de desvío está a media altura"
               }
             },
-			{
+            {
               "if": {
                 "and": [
                   "railway:signal:route:height=dwarf"
@@ -307,13 +317,18 @@
             "key": "railway:signal:route:height"
           },
           "condition": {
-            "or": [
-              "railway:signal:position=left",
-              "railway:signal:position=right"
+            "and": [
+              "railway:signal:route=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
             ]
           }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -336,7 +351,7 @@
                 "es": "La señal de llamada está a media altura"
               }
             },
-			{
+            {
               "if": {
                 "and": [
                   "railway:signal:minor:height=dwarf"
@@ -359,9 +374,134 @@
             "key": "railway:signal:minor:height"
           },
           "condition": {
+            "and": [
+              "railway:signal:minor=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
+            ]
+          }
+        },
+		{
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:main:function=entry"
+                ]
+              },
+              "then": {
+                "es": "Es una señal principal de entrada."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:main:function=exit"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "Es una señal principal de salida"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:main:function=block"
+                ]
+              },
+              "then": {
+                "en": "",
+                "es": "Es una señal principal de bloqueo"
+              }
+            },
+			{
+              "if": {
+                "and": [
+                  "railway:signal:main:function=intermediate"
+                ]
+              },
+              "then": {
+                "es": "Es una señal principal intermedia."
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Cual es la funcion de la señal principal?"
+          },
+          "freeform": {
+            "key": "railway:signal:main:function"
+          },
+          "condition": {
             "or": [
-              "railway:signal:position=left",
-              "railway:signal:position=right"
+              "railway:signal:main=yes",
+              "railway:signal:main_repeated=yes"
+                ]
+              }
+        },
+		{
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:minor:caption=L"
+                ]
+              },
+              "then": {
+                "es": "La señal de llamada muestra la letra L."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:minor:caption=A"
+                ]
+              },
+              "then": {
+                "es": "La señal de llamada muestra la letra A."
+              }
+            }
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene un texto visible?"
+          },
+          "freeform": {
+            "key": "railway:signal:minor:caption"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:minor=yes"
+            ]
+          }
+        },
+		{
+          "mappings": [
+          ],
+          "render": {
+            "en": "{key}",
+            "es": "{key}"
+          },
+          "question": {
+            "es": "¿Tiene un texto visible?"
+          },
+          "freeform": {
+            "key": "railway:signal:route:caption"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:route=yes"
             ]
           }
         }
@@ -428,14 +568,14 @@
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:main:deactivated=no",
-			"railway:signal:main:height=normal",
+            "railway:signal:main:height=normal",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-			"railway:signal:minor:height=medium",
+            "railway:signal:minor:height=medium",
             "railway:signal:shunting=yes",
             "railway:signal:shunting:form=light",
             "railway:signal:shunting:deactivated=no",
-			"railway:signal:shunting:height=dwarf",
+            "railway:signal:shunting:height=dwarf",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
@@ -443,16 +583,16 @@
             "es": "Principal, de llamada y de maniobras"
           }
         },
-		{
+        {
           "tags": [
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:main:deactivated=no",
-			"railway:signal:main:height=normal",
+            "railway:signal:main:height=normal",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-			"railway:signal:minor:height=medium",
+            "railway:signal:minor:height=medium",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
@@ -460,16 +600,16 @@
             "es": "Principal y de llamada"
           }
         },
-		 {
+        {
           "tags": [
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:route=yes",
             "railway:signal:route:form=light",
-			"railway:signal:minor=yes",
+            "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-			"railway:signal:minor:height=medium",
+            "railway:signal:minor:height=medium",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
