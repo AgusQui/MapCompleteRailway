@@ -193,6 +193,9 @@
             "or": [
               "railway:signal:position=left",
               "railway:signal:position=right"
+            ],
+	    "and": [
+              "railway:signal:main=yes"
             ]
           }
         },
