@@ -190,12 +190,14 @@
             "key": "railway:signal:main:height"
           },
           "condition": {
-            "or": [
+			"and": [
+              "railway:signal:main=yes"
+			  {
+               "or": [
               "railway:signal:position=left",
               "railway:signal:position=right"
-            ],
-	    "and": [
-              "railway:signal:main=yes"
+			  ]
+			  }
             ]
           }
         },
