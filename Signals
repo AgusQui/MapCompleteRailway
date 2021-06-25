@@ -191,7 +191,7 @@
           },
           "condition": {
 			"and": [
-              "railway:signal:main=yes"
+              "railway:signal:main=yes",
 			  {
                "or": [
               "railway:signal:position=left",
