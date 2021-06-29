@@ -1,5 +1,5 @@
 {
-  "id": "RailwaySignals",
+  "id": "RailwaySignalsARG",
   "title": {
     "en": "Railway signaling"
   },
@@ -27,7 +27,7 @@
       "id": "signal",
       "name": {
         "en": "signals",
-        "es": "Señales"
+        "es": "Señales de tráfico"
       },
       "minzoom": 12,
       "overpassTags": {
@@ -35,7 +35,79 @@
           "railway=signal"
         ]
       },
-      "title": {},
+      "title": {
+        "render": {
+          "es": "Señal ferroviaria"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "railway:signal:main!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal principal"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:combined!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal combinada"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:route!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal de desvío"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:shunting!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal de maniobras"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:main_repeated!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal principal repetida"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:minor!~",
+                "railway=signal"
+              ]
+            },
+            "then": {
+              "es": "Señal de llamada"
+            }
+          }
+        ]
+      },
       "description": {},
       "tagRenderings": [
         {},
@@ -385,7 +457,7 @@
             ]
           }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -419,7 +491,7 @@
                 "es": "Es una señal principal de bloqueo"
               }
             },
-			{
+            {
               "if": {
                 "and": [
                   "railway:signal:main:function=intermediate"
@@ -444,10 +516,10 @@
             "or": [
               "railway:signal:main=yes",
               "railway:signal:main_repeated=yes"
-                ]
-              }
+            ]
+          }
         },
-		{
+        {
           "mappings": [
             {
               "if": {
@@ -486,9 +558,8 @@
             ]
           }
         },
-		{
-          "mappings": [
-          ],
+        {
+          "mappings": [],
           "render": {
             "en": "{key}",
             "es": "{key}"
