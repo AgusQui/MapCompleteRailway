@@ -51,7 +51,7 @@
               "es": "Señal principal"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:combined!~",
@@ -62,7 +62,7 @@
               "es": "Señal combinada"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:route!~",
@@ -73,7 +73,7 @@
               "es": "Señal de desvío"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:shunting!~",
@@ -84,7 +84,7 @@
               "es": "Señal de maniobras"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:main_repeated!~",
@@ -95,7 +95,7 @@
               "es": "Señal principal repetida"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:minor!~",
@@ -104,6 +104,68 @@
             },
             "then": {
               "es": "Señal de llamada"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:minor!~",
+                "railway=signal",
+                "railway:signal:main!~"
+              ]
+            },
+            "then": {
+              "es": "Señal principal y de llamada"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:minor!~",
+                "railway=signal",
+                "railway:signal:main!~",
+                "railway:signal:shunting!~"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de llamada y de maniobras"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway=signal",
+                "railway:signal:main!~",
+                "railway:signal:route!~"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de desvío"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway=signal",
+                "railway:signal:main!~",
+                "railway:signal:route!~",
+                "railway:signal:minor!~"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de desvío y de llamada"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway=signal",
+                "railway:signal:shunting!~",
+                "railway:signal:route!~"
+              ]
+            },
+            "then": {
+              "es": "Señal de desvío y de maniobras"
             }
           }
         ]
@@ -579,13 +641,41 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "./assets/svg/bug.svg"
+        "render": "./assets/svg/bug.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "railway:signal:route!~",
+                "railway:signal:main!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main!~",
+                "railway:signal:minor!~",
+                "railway:signal:shunting!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting.png"
+            }
+          }
+        ]
       },
       "width": {
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center"
+        "render": "25,25,center",
+        "mappings": []
       },
       "color": {
         "render": "#00f"
