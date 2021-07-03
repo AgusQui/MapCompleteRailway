@@ -674,7 +674,7 @@
         "render": "8"
       },
       "iconSize": {
-        "render": "25,25,center",
+        "render": "30,30,center",
         "mappings": []
       },
       "color": {
