@@ -43,8 +43,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:main!~",
-                "railway=signal"
+                "railway:signal:main=yes",
+                "railway=signal",
+                "railway:signal:route!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:minor!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -54,8 +59,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:combined!~",
-                "railway=signal"
+                "railway:signal:combined=yes",
+                "railway=signal",
+                "railway:signal:route!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:minor!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:main!~yes"
               ]
             },
             "then": {
@@ -65,8 +75,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:route!~",
-                "railway=signal"
+                "railway:signal:route=yes",
+                "railway=signal",
+                "railway:signal:main!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:minor!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -76,8 +91,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:shunting!~",
-                "railway=signal"
+               "railway:signal:route=yes",
+                "railway=signal",
+                "railway:signal:main!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:minor!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -87,8 +107,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:main_repeated!~",
-                "railway=signal"
+                "railway:signal:main_repeated=yes",
+                "railway=signal",
+                "railway:signal:route!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:minor!~yes",
+				"railway:signal:main!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -98,8 +123,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:minor!~",
-                "railway=signal"
+                "railway:signal:minor=yes",
+                "railway=signal",
+                "railway:signal:route!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:main!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -109,9 +139,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:minor!~",
+                "railway:signal:minor=yes",
                 "railway=signal",
-                "railway:signal:main!~"
+                "railway:signal:main=yes",
+                "railway:signal:route!~yes",
+				"railway:signal:shunting!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -121,10 +155,13 @@
           {
             "if": {
               "and": [
-                "railway:signal:minor!~",
+                "railway:signal:minor=yes",
                 "railway=signal",
-                "railway:signal:main!~",
-                "railway:signal:shunting!~"
+                "railway:signal:main=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:route!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -135,21 +172,27 @@
             "if": {
               "and": [
                 "railway=signal",
-                "railway:signal:main!~",
-                "railway:signal:route!~"
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",				"railway:signal:shunting!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes",
+				"railway:signal:minor!~yes"
               ]
             },
             "then": {
-              "es": "Señal principal, de desvío"
+              "es": "Señal principal y de desvío"
             }
           },
           {
             "if": {
               "and": [
                 "railway=signal",
-                "railway:signal:main!~",
-                "railway:signal:route!~",
-                "railway:signal:minor!~"
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:minor=yes",				"railway:signal:shunting!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes"
+				
               ]
             },
             "then": {
@@ -160,8 +203,12 @@
             "if": {
               "and": [
                 "railway=signal",
-                "railway:signal:shunting!~",
-                "railway:signal:route!~"
+                "railway:signal:shunting=yes",
+                "railway:signal:route=yes",				
+				"railway:signal:main!~yes",
+				"railway:signal:main_repeated!~yes",
+				"railway:signal:combined!~yes",
+				"railway:signal:minor!~yes"
               ]
             },
             "then": {
@@ -172,33 +219,6 @@
       },
       "description": {},
       "tagRenderings": [
-        {},
-        {
-          "freeform": {
-            "addExtraTags": [],
-            "key": "ref"
-          },
-          "question": {
-            "es": "¿Cual es el número de referencia?"
-          },
-          "render": {
-            "en": "{key}",
-            "es": "{key}"
-          },
-          "mappings": [
-            {
-              "if": {
-                "and": [
-                  "railway=ref"
-                ]
-              },
-              "then": {
-                "es": "La referencia es"
-              },
-              "hideInAnswer": true
-            }
-          ]
-        },
         {
           "freeform": {
             "addExtraTags": [],
@@ -287,7 +307,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "Esta ubicado entre los rieles"
               }
             }
@@ -424,7 +443,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "La señal de desvío está a media altura"
               }
             },
@@ -435,7 +453,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "Es una señal de desvío enana"
               }
             }
@@ -481,7 +498,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "La señal de llamada está a media altura"
               }
             },
@@ -492,7 +508,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "Es una señal de llamada enana"
               }
             }
@@ -538,7 +553,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "Es una señal principal de salida"
               }
             },
@@ -549,7 +563,6 @@
                 ]
               },
               "then": {
-                "en": "",
                 "es": "Es una señal principal de bloqueo"
               }
             },
@@ -627,7 +640,7 @@
             "es": "{key}"
           },
           "question": {
-            "es": "¿Tiene un texto visible?"
+            "es": "¿La señal de desvío tiene un texto visible?"
           },
           "freeform": {
             "key": "railway:signal:route:caption"
@@ -635,6 +648,95 @@
           "condition": {
             "and": [
               "railway:signal:route=yes"
+            ]
+          }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "{key}",
+            "es": "La referencia de la señal principal"
+          },
+          "question": {
+            "es": "¿Cual es el código de referencia de la señal principal?"
+          },
+          "freeform": {
+            "key": "railway:signal:main:ref"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:main=yes"
+            ]
+          }
+        },{
+          "mappings": [],
+          "render": {
+            "en": "{key}",
+            "es": "Referencia de la señal principal repetida"
+          },
+          "question": {
+            "es": "¿Cual es el código de referencia de la señal principal repetida?"
+          },
+          "freeform": {
+            "key": "railway:signal:main_repeated:ref"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:main_repeated=yes"
+            ]
+          }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "{key}",
+            "es": "Referencia de la señal combinada"
+          },
+          "question": {
+            "es": "¿Cual es el código de referencia de la señal combinada?"
+          },
+          "freeform": {
+            "key": "railway:signal:combined:ref"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:combined=yes"
+            ]
+          }
+        },
+		{
+		  "mappings": [],
+          "render": {
+            "en": "{key}",
+            "es": "Referencia señal de desvío"
+          },
+          "question": {
+            "es": "¿Cual es el código de referencia de la señal de desvío?"
+          },
+          "freeform": {
+            "key": "railway:signal:route:ref"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:route=yes"
+            ]
+          }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "{key}",
+            "es": "{Referencia de la señal de maniobras}"
+          },
+          "question": {
+            "es": "¿Cual es el código de referencia de la señal de maniobras?"
+          },
+          "freeform": {
+            "key": "railway:signal:shunting:ref"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:shunting=yes"
             ]
           }
         }
@@ -664,8 +766,89 @@
               ]
             },
             "then": {
-              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting1.png",
-              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting1.png"
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor-shunting.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:combined!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/combined.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/combined.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main!~",
+                "railway:signal:minor!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-minor.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main!~",
+                "railway:signal:minor!~",
+                "railway:signal:route!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:shunting!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/shunting.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:shunting!~",
+                "railway:signal:route!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/shunting-route.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/shunting-route.png"
+            }
+          },
+		  {
+            "if": {
+              "and": [
+                "railway:signal:main_repeated!~"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main_repeated.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main_repeated.png"
             }
           }
         ]
@@ -674,7 +857,7 @@
         "render": "8"
       },
       "iconSize": {
-        "render": "30,30,center",
+        "render": "25,25,center",
         "mappings": []
       },
       "color": {
