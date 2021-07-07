@@ -46,10 +46,10 @@
                 "railway:signal:main=yes",
                 "railway=signal",
                 "railway:signal:route!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:minor!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -62,10 +62,10 @@
                 "railway:signal:combined=yes",
                 "railway=signal",
                 "railway:signal:route!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:minor!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:main!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:main!~yes"
               ]
             },
             "then": {
@@ -78,10 +78,10 @@
                 "railway:signal:route=yes",
                 "railway=signal",
                 "railway:signal:main!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:minor!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -94,10 +94,10 @@
                "railway:signal:route=yes",
                 "railway=signal",
                 "railway:signal:main!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:minor!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -110,10 +110,10 @@
                 "railway:signal:main_repeated=yes",
                 "railway=signal",
                 "railway:signal:route!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:minor!~yes",
-				"railway:signal:main!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -126,10 +126,10 @@
                 "railway:signal:minor=yes",
                 "railway=signal",
                 "railway:signal:route!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:main!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:main!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -143,9 +143,9 @@
                 "railway=signal",
                 "railway:signal:main=yes",
                 "railway:signal:route!~yes",
-				"railway:signal:shunting!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:shunting!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -160,8 +160,8 @@
                 "railway:signal:main=yes",
                 "railway:signal:shunting=yes",
                 "railway:signal:route!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -173,10 +173,43 @@
               "and": [
                 "railway=signal",
                 "railway:signal:main=yes",
-                "railway:signal:route=yes",				"railway:signal:shunting!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes",
-				"railway:signal:minor!~yes"
+                "railway:signal:route!~yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes",
+                "railway:signal:minor!~yes"
+              ]
+            },
+            "then": {
+              "es": "Señal principal y de maniobras"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:minor=yes",
+                "railway=signal",
+                "railway:signal:main=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:route=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de desvío, de llamada y de maniobras"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway=signal",
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes",
+                "railway:signal:minor!~yes"
               ]
             },
             "then": {
@@ -189,10 +222,11 @@
                 "railway=signal",
                 "railway:signal:main=yes",
                 "railway:signal:route=yes",
-                "railway:signal:minor=yes",				"railway:signal:shunting!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes"
-				
+                "railway:signal:minor=yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+                
               ]
             },
             "then": {
@@ -204,11 +238,11 @@
               "and": [
                 "railway=signal",
                 "railway:signal:shunting=yes",
-                "railway:signal:route=yes",				
-				"railway:signal:main!~yes",
-				"railway:signal:main_repeated!~yes",
-				"railway:signal:combined!~yes",
-				"railway:signal:minor!~yes"
+                "railway:signal:route=yes",                
+                "railway:signal:main!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes",
+                "railway:signal:minor!~yes"
               ]
             },
             "then": {
@@ -651,7 +685,7 @@
             ]
           }
         },
-		{
+        {
           "mappings": [],
           "render": {
             "en": "{key}",
@@ -686,7 +720,7 @@
             ]
           }
         },
-		{
+        {
           "mappings": [],
           "render": {
             "en": "{key}",
@@ -704,8 +738,8 @@
             ]
           }
         },
-		{
-		  "mappings": [],
+        {
+          "mappings": [],
           "render": {
             "en": "{key}",
             "es": "Referencia señal de desvío"
@@ -722,7 +756,7 @@
             ]
           }
         },
-		{
+        {
           "mappings": [],
           "render": {
             "en": "{key}",
@@ -748,8 +782,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:route!~",
-                "railway:signal:main!~"
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -760,9 +798,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:main!~",
-                "railway:signal:minor!~",
-                "railway:signal:shunting!~"
+                "railway:signal:main=yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -773,7 +814,44 @@
           {
             "if": {
               "and": [
-                "railway:signal:main!~"
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor-shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor-shunting.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main=yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-shunting.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                 "railway:signal:main=yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -784,7 +862,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:combined!~"
+                "railway:signal:main!~yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined=yes"
               ]
             },
             "then": {
@@ -794,9 +877,12 @@
           },
           {
             "if": {
-              "and": [
-                "railway:signal:main!~",
-                "railway:signal:minor!~"
+                "railway:signal:main=yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -807,9 +893,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:main!~",
-                "railway:signal:minor!~",
-                "railway:signal:route!~"
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -820,7 +909,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:shunting!~"
+                "railway:signal:main!~yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -831,8 +925,12 @@
           {
             "if": {
               "and": [
-                "railway:signal:shunting!~",
-                "railway:signal:route!~"
+                "railway:signal:main!~yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -840,10 +938,15 @@
               "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/shunting-route.png"
             }
           },
-		  {
+          {
             "if": {
               "and": [
-                "railway:signal:main_repeated!~"
+                "railway:signal:main!~yes",
+                "railway:signal:route!~yes",
+                "railway:signal:shunting!~yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated=yes",
+                "railway:signal:combined!~yes"
               ]
             },
             "then": {
@@ -895,10 +998,8 @@
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
-            "railway:signal:main:deactivated=no",
             "railway:signal:route=yes",
             "railway:signal:route:form=light",
-            "railway:signal:route:deactivated=no",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
@@ -911,14 +1012,11 @@
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
-            "railway:signal:main:deactivated=no",
             "railway:signal:main:height=normal",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-            "railway:signal:minor:height=medium",
             "railway:signal:shunting=yes",
             "railway:signal:shunting:form=light",
-            "railway:signal:shunting:deactivated=no",
             "railway:signal:shunting:height=dwarf",
             "fixme=pegar a la vía y corregir direction"
           ],
@@ -932,11 +1030,31 @@
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
+            "railway:signal:main:height=normal",
+            "railway:signal:route=yes",
+            "railway:signal:route:form=light",
+            "railway:signal:route:height=normal",
+            "railway:signal:minor=yes",
+            "railway:signal:minor:form=light",
+            "railway:signal:shunting=yes",
+            "railway:signal:shunting:form=light",
+            "railway:signal:shunting:height=dwarf",
+            "fixme=pegar a la vía y corregir direction"
+          ],
+          "title": {
+            "en": "Main & Route & Minor & Shunting signal",
+            "es": "Principal, de desvío, de llamada y de maniobras"
+          }
+        },
+        {
+          "tags": [
+            "railway=signal",
+            "railway:signal:main=yes",
+            "railway:signal:main:form=light",
             "railway:signal:main:deactivated=no",
             "railway:signal:main:height=normal",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-            "railway:signal:minor:height=medium",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
@@ -949,11 +1067,26 @@
             "railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
+            "railway:signal:main:height=normal",
+            "railway:signal:shunting=yes",
+            "railway:signal:shunting:form=light",
+            "railway:signal:shunting:height=dwarf",
+            "fixme=pegar a la vía y corregir direction"
+          ],
+          "title": {
+            "en": "Main & Shunting signal",
+            "es": "Principal y de maniobras"
+          }
+        },
+        {
+          "tags": [
+            "railway=signal",
+            "railway:signal:main=yes",
+            "railway:signal:main:form=light",
             "railway:signal:route=yes",
             "railway:signal:route:form=light",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-            "railway:signal:minor:height=medium",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
