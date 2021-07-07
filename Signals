@@ -1958,7 +1958,7 @@
             "railway:signal:main:deactivated=yes",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
-            "railway:signal:minor:deactivated=yes"
+            "railway:signal:minor:deactivated=yes",
             "railway:signal:shunting=yes",
             "railway:signal:shunting:form=light",
             "railway:signal:shunting:height=dwarf",
@@ -1980,7 +1980,7 @@
             "railway:signal:route=yes",
             "railway:signal:route:form=light",
             "railway:signal:route:height=normal",
-            "railway:signal:route:deactivated=yes"
+            "railway:signal:route:deactivated=yes",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
             "railway:signal:minor:deactivated=yes",
