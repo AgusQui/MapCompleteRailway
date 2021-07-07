@@ -1955,7 +1955,7 @@
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
             "railway:signal:main:height=normal",
-            "railway:signal:main:deactivated=yes"
+            "railway:signal:main:deactivated=yes",
             "railway:signal:minor=yes",
             "railway:signal:minor:form=light",
             "railway:signal:minor:deactivated=yes"
