@@ -1938,7 +1938,7 @@
             "disused:railway=signal",
             "railway:signal:main=yes",
             "railway:signal:main:form=light",
-            "railway:signal:main:deactivated=yes"
+            "railway:signal:main:deactivated=yes",
             "railway:signal:route=yes",
             "railway:signal:route:form=light",
             "railway:signal:route:deactivated=yes",
