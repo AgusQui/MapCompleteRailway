@@ -2,6 +2,7 @@
   "id": "RailwaySignalsARG",
   "title": {
     "en": "Railway signaling"
+    "es": "Señales ferroviarias"
   },
   "shortDescription": {
     "es": "señales ferroviarias"
@@ -15,11 +16,11 @@
     "es"
   ],
   "maintainer": "",
-  "icon": "./assets/svg/bug.svg",
+  "icon": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/Signals.png",
   "version": "0",
   "startLat": -34.6504,
   "startLon": -58.78872,
-  "startZoom": 18,
+  "startZoom": 19,
   "widenFactor": 0.05,
   "socialImage": "",
   "layers": [
@@ -29,7 +30,7 @@
         "en": "signals",
         "es": "Señales de tráfico"
       },
-      "minzoom": 12,
+      "minzoom": 13,
       "overpassTags": {
         "and": [
           "railway=signal"
@@ -198,6 +199,22 @@
             },
             "then": {
               "es": "Señal principal, de desvío, de llamada y de maniobras"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:minor!~yes",
+                "railway=signal",
+                "railway:signal:main=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:route=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de desvío y de maniobras"
             }
           },
           {
@@ -398,6 +415,16 @@
               },
               "then": {
                 "es": "La señal de maniobras es enana."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:shunting:height=medium"
+                ]
+              },
+              "then": {
+                "es": "La señal de maniobras esta a media altura."
               }
             }
           ],
@@ -688,14 +715,15 @@
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "La referencia de la señal principal"
+            "en": "main ref {railway:signal:main:ref}",
+            "es": "La señal principal tiene cód {railway:signal:main:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal principal?"
           },
           "freeform": {
-            "key": "railway:signal:main:ref"
+            "key": "railway:signal:main:ref",
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -705,14 +733,15 @@
         },{
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "Referencia de la señal principal repetida"
+            "en": "main_repeated ref {railway:signal:main_repeated:ref}",
+            "es": "La señal principal repetida tiene código {railway:signal:main_repeated:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal principal repetida?"
           },
           "freeform": {
-            "key": "railway:signal:main_repeated:ref"
+            "key": "railway:signal:main_repeated:ref",
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -723,14 +752,15 @@
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "Referencia de la señal combinada"
+            "en": "combined ref {railway:signal:combined:ref}",
+            "es": "La señal combinada tiene código {railway:signal:combined:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal combinada?"
           },
           "freeform": {
-            "key": "railway:signal:combined:ref"
+            "key": "railway:signal:combined:ref",
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -741,14 +771,15 @@
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "Referencia señal de desvío"
+            "en": "route ref {railway:signal:route:ref}",
+            "es": "La señal de desvío tiene código {railway:signal:route:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal de desvío?"
           },
           "freeform": {
-            "key": "railway:signal:route:ref"
+            "key": "railway:signal:route:ref",
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -759,14 +790,15 @@
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "{Referencia de la señal de maniobras}"
+            "en": "shunting ref {railway:signal:shunting:ref}",
+            "es": "La señal de maniobras tiene código {railway:signal:shunting:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal de maniobras?"
           },
           "freeform": {
-            "key": "railway:signal:shunting:ref"
+            "key": "railway:signal:shunting:ref",
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -777,7 +809,7 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
-        "render": "./assets/svg/bug.svg",
+        "render": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/Signals.png",
         "mappings": [
           {
             "if": {
@@ -825,6 +857,22 @@
             "then": {
               "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor-shunting.png",
               "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-minor-shunting.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:main=yes",
+                "railway:signal:route=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:minor!~yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-shunting.png",
+              "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/main-route-shunting.png"
             }
           },
           {
@@ -1045,6 +1093,25 @@
           "title": {
             "en": "Main & Route & Minor & Shunting signal",
             "es": "Principal, de desvío, de llamada y de maniobras"
+          }
+        },
+        {
+          "tags": [
+            "railway=signal",
+            "railway:signal:main=yes",
+            "railway:signal:main:form=light",
+            "railway:signal:main:height=normal",
+            "railway:signal:route=yes",
+            "railway:signal:route:form=light",
+            "railway:signal:route:height=normal",
+            "railway:signal:shunting=yes",
+            "railway:signal:shunting:form=light",
+            "railway:signal:shunting:height=dwarf",
+            "fixme=pegar a la vía y corregir direction"
+          ],
+          "title": {
+            "en": "Main & Route & Shunting signal",
+            "es": "Principal, de desvío y de maniobras"
           }
         },
         {
@@ -1314,6 +1381,22 @@
             },
             "then": {
               "es": "Señal principal, de desvío, de llamada y de maniobras abandonada"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "railway:signal:minor!~yes",
+                "disused:railway=signal",
+                "railway:signal:main=yes",
+                "railway:signal:shunting=yes",
+                "railway:signal:route=yes",
+                "railway:signal:main_repeated!~yes",
+                "railway:signal:combined!~yes"
+              ]
+            },
+            "then": {
+              "es": "Señal principal, de desvío y de maniobras abandonada"
             }
           },
           {
@@ -1993,6 +2076,28 @@
           "title": {
             "en": "Main & Route & Minor & Shunting signal",
             "es": "Principal, de desvío, de llamada y de maniobras abandonada"
+          }
+        },
+         {
+          "tags": [
+            "disused:railway=signal",
+            "railway:signal:main=yes",
+            "railway:signal:main:form=light",
+            "railway:signal:main:height=normal",
+            "railway:signal:main:deactivated=yes",
+            "railway:signal:route=yes",
+            "railway:signal:route:form=light",
+            "railway:signal:route:height=normal",
+            "railway:signal:route:deactivated=yes",
+            "railway:signal:shunting=yes",
+            "railway:signal:shunting:form=light",
+            "railway:signal:shunting:height=dwarf",
+            "railway:signal:shunting:deactivated=yes",
+            "fixme=pegar a la vía y corregir direction"
+          ],
+          "title": {
+            "en": "Main & Route & Minor & Shunting signal",
+            "es": "Principal, de desvío y de maniobras abandonada"
           }
         },
         {
