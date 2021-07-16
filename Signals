@@ -723,7 +723,7 @@
           },
           "freeform": {
             "key": "railway:signal:main:ref",
-            "type": ""
+            "type": "text"
           },
           "condition": {
             "and": [
@@ -741,7 +741,7 @@
           },
           "freeform": {
             "key": "railway:signal:main_repeated:ref",
-            "type": "nat"
+            "type": "text"
           },
           "condition": {
             "and": [
@@ -760,7 +760,7 @@
           },
           "freeform": {
             "key": "railway:signal:combined:ref",
-            "type": "nat"
+            "type": "text"
           },
           "condition": {
             "and": [
@@ -798,7 +798,7 @@
           },
           "freeform": {
             "key": "railway:signal:shunting:ref",
-            "type": "nat"
+            "type": "text"
           },
           "condition": {
             "and": [
