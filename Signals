@@ -723,7 +723,7 @@
           },
           "freeform": {
             "key": "railway:signal:main:ref",
-            "type": "nat"
+            "type": ""
           },
           "condition": {
             "and": [
@@ -779,7 +779,7 @@
           },
           "freeform": {
             "key": "railway:signal:route:ref",
-            "type": "nat"
+            "type": "text"
           },
           "condition": {
             "and": [
