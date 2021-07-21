@@ -2570,6 +2570,7 @@
       "presets": [
         {
           "tags": [
+		    "railway=signal",
             "railway:signal:whistle=yes",
             "railway:signal:whistle:form=sign",
 			"railway:signal:whistle:caption=S",
@@ -2582,6 +2583,7 @@
         },
         {
           "tags": [
+		    "railway=signal",
             "railway:signal:speed_limit=yes",
             "railway:signal:speed_limit:form=sign",
             "fixme=pegar a la vía y corregir direction"
@@ -2593,6 +2595,7 @@
         },
         {
           "tags": [
+		    "railway=signal",
             "railway:signal:stop=yes",
             "railway:signal:stop:form=sign",
             "fixme=pegar a la vía y corregir direction"
