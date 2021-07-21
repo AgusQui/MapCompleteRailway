@@ -2522,7 +2522,7 @@
             "es": "¿Cuántos coches se indica?"
           },
           "freeform": {
-            "key": "railway:stop:caption",
+            "key": "railway:signal:stop:caption",
             "type": "nat"
           },
           "condition": {
