@@ -33,7 +33,10 @@
       "minzoom": 13,
       "overpassTags": {
         "and": [
-          "railway=signal"
+          "railway=signal",
+          "railway:signal:whistle!~yes",
+          "railway:signal:speed_limit!~yes",
+          "railway:signal:stop!~yes"
         ]
       },
       "title": {
@@ -2208,7 +2211,7 @@
       "overpassTags": {
         "and": [
           "railway=signal",
-		  "railway:signal:main!~yes",
+          "railway:signal:main!~yes",
           "railway:signal:route!~yes",
           "railway:signal:shunting!~yes",
           "railway:signal:minor!~yes",
@@ -2245,7 +2248,7 @@
             "if": {
               "and": [
                 "railway:signal:stop=yes"
-				]
+                ]
             },
             "then": {
               "es": "Marca de detención"
@@ -2367,14 +2370,14 @@
                 "es": "La señal de silbe tiene una altura normal"
               }
             },
-			{
+            {
               "if": {
                 "and": [
                   "railway:signal:whistle:height=dwarf"
                 ]
               },
               "then": {
-                "es": "La señal de silbe es enanal"
+                "es": "La señal de silbe es enana"
               }
             }
           ],
@@ -2412,7 +2415,7 @@
                 "es": "El indicador de velocidad tiene una altura normal"
               }
             },
-			{
+            {
               "if": {
                 "and": [
                   "railway:signal:speed_limit:height=dwarf"
@@ -2501,7 +2504,7 @@
           },
           "freeform": {
             "key": "railway:signal:speed_limit:speed",
-			"type": "nat"
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -2509,7 +2512,7 @@
             ]
           }
         },
-		{
+        {
           "mappings": [],
           "render": {
             "en": "Stop for {railway:signal:stop:caption} wagons",
@@ -2520,7 +2523,7 @@
           },
           "freeform": {
             "key": "railway:stop:caption",
-			"type": "nat"
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -2533,7 +2536,7 @@
       "icon": {
         "render": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/Signals.png",
         "mappings": [
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:whistle=yes"
@@ -2544,7 +2547,7 @@
               "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/whistle.png"
             }
           },
-		  {
+          {
             "if": {
               "and": [
                 "railway:signal:speed_limit=yes"
@@ -2555,7 +2558,7 @@
               "es": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/maxspeed.png"
             }
           }
-		]
+        ]
       },
       "width": {
         "render": "8"
@@ -2570,10 +2573,10 @@
       "presets": [
         {
           "tags": [
-		    "railway=signal",
+            "railway=signal",
             "railway:signal:whistle=yes",
             "railway:signal:whistle:form=sign",
-			"railway:signal:whistle:caption=S",
+            "railway:signal:whistle:caption=S",
             "fixme=pegar a la vía y corregir direction"
           ],
           "title": {
@@ -2583,7 +2586,7 @@
         },
         {
           "tags": [
-		    "railway=signal",
+            "railway=signal",
             "railway:signal:speed_limit=yes",
             "railway:signal:speed_limit:form=sign",
             "fixme=pegar a la vía y corregir direction"
@@ -2595,7 +2598,7 @@
         },
         {
           "tags": [
-		    "railway=signal",
+            "railway=signal",
             "railway:signal:stop=yes",
             "railway:signal:stop:form=sign",
             "fixme=pegar a la vía y corregir direction"
