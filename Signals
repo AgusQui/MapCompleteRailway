@@ -2493,19 +2493,19 @@
         {
           "mappings": [],
           "render": {
-            "en": "Maxspeed {railway:signal:max_speed:speed}",
-            "es": "Velocidad máxima {railway:signal:max_speed:speed}"
+            "en": "Maxspeed {railway:signal:speed_limit:speed}",
+            "es": "Velocidad máxima {railway:signal:speed_limit:speed}"
           },
           "question": {
             "es": "¿Cual es la velocidad máxima?"
           },
           "freeform": {
-            "key": "railway:signal:max_speed:speed",
+            "key": "railway:signal:speed_limit:speed",
 			"type": "nat"
           },
           "condition": {
             "and": [
-              "railway:signal:max_speed=yes"
+              "railway:signal:speed_limit=yes"
             ]
           }
         },
@@ -2547,7 +2547,7 @@
 		  {
             "if": {
               "and": [
-                "railway:signal:max_speed=yes"
+                "railway:signal:speed_limit=yes"
               ]
             },
             "then": {
