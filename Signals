@@ -718,6 +718,27 @@
         {
           "mappings": [],
           "render": {
+            "en": "ref {ref}",
+            "es": "La señal tiene cód {ref}"
+          },
+          "question": {
+            "es": "¿Cual es el único código de referencia de la señal?"
+          },
+          "freeform": {
+            "key": "ref",
+            "type": "text"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:main:ref!~",
+              "railway:signal:route:ref!~",
+              "railway:signal:shunting:ref!~"
+            ]
+          }
+        }
+        {
+          "mappings": [],
+          "render": {
             "en": "main ref {railway:signal:main:ref}",
             "es": "La señal principal tiene cód {railway:signal:main:ref}"
           },
@@ -733,7 +754,8 @@
               "railway:signal:main=yes"
             ]
           }
-        },{
+        },
+        {
           "mappings": [],
           "render": {
             "en": "main_repeated ref {railway:signal:main_repeated:ref}",
@@ -785,8 +807,26 @@
             "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:route=yes"
+            "or": [
+             {
+              "and": [
+               "railway:signal:main=yes",
+               "railway:signal:route=yes"
+              ]
+             },
+             {
+              "and": [
+               "railway:signal:route=yes",
+               "railway:signal:shunting=yes"
+              ]
+             },
+             {
+              "and": [
+               "railway:signal:main=yes",
+               "railway:signal:route=yes",
+               "railway:signal:shunting=yes"
+              ]
+             }
             ]
           }
         },
