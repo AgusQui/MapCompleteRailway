@@ -729,7 +729,7 @@
             "type": "text"
           },
           "condition": {
-            "and": [
+            "or": [
               "railway:signal:main:ref!~",
               "railway:signal:route:ref!~",
               "railway:signal:shunting:ref!~"
