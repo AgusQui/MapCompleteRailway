@@ -735,7 +735,7 @@
               "railway:signal:shunting:ref!~"
             ]
           }
-        }
+        },
         {
           "mappings": [],
           "render": {
