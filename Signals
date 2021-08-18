@@ -729,12 +729,28 @@
             "type": "text"
           },
           "condition": {
-            "or": [
-              "railway:signal:main:ref!~",
-              "railway:signal:route:ref!~",
-              "railway:signal:shunting:ref!~"
-            ]
-          }
+		   "or": [
+             {
+			   "and": [
+                  "railway:signal:main!~",
+			      "railway:signal:route!~"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main!~",
+			      "railway:signal:shunting!~"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main!~",
+			      "railway:signal:route!~",
+				  "railway:signal:shunting!~"
+                ]
+              }			  
+		    ]
+		  }
         },
         {
           "mappings": [],
@@ -776,44 +792,6 @@
         {
           "mappings": [],
           "render": {
-            "en": "main_repeated ref {railway:signal:main_repeated:ref}",
-            "es": "La señal principal repetida tiene código {railway:signal:main_repeated:ref}"
-          },
-          "question": {
-            "es": "¿Cual es el código de referencia de la señal principal repetida?"
-          },
-          "freeform": {
-            "key": "railway:signal:main_repeated:ref",
-            "type": "text"
-          },
-          "condition": {
-            "and": [
-              "railway:signal:main_repeated=yes"
-            ]
-          }
-        },
-        {
-          "mappings": [],
-          "render": {
-            "en": "combined ref {railway:signal:combined:ref}",
-            "es": "La señal combinada tiene código {railway:signal:combined:ref}"
-          },
-          "question": {
-            "es": "¿Cual es el código de referencia de la señal combinada?"
-          },
-          "freeform": {
-            "key": "railway:signal:combined:ref",
-            "type": "text"
-          },
-          "condition": {
-            "and": [
-              "railway:signal:combined=yes"
-            ]
-          }
-        },
-        {
-          "mappings": [],
-          "render": {
             "en": "route ref {railway:signal:route:ref}",
             "es": "La señal de desvío tiene código {railway:signal:route:ref}"
           },
@@ -830,12 +808,6 @@
               "and": [
                "railway:signal:main=yes",
                "railway:signal:route=yes"
-              ]
-             },
-             {
-              "and": [
-               "railway:signal:route=yes",
-               "railway:signal:shunting=yes"
               ]
              },
              {
@@ -862,10 +834,22 @@
             "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:shunting=yes"
-            ]
-          }
+		   "or": [
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:shunting=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes",
+				  "railway:signal:shunting=yes"
+                ]
+              }			  
+		    ]
+		  }
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
