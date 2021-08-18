@@ -750,10 +750,28 @@
             "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:main=yes"
-            ]
-          }
+		   "or": [
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:shunting=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes",
+				  "railway:signal:shunting=yes"
+                ]
+              }			  
+		    ]
+		  }
         },
         {
           "mappings": [],
