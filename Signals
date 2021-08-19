@@ -732,21 +732,21 @@
 		   "or": [
              {
 			   "and": [
-                  "railway:signal:main!~",
-			      "railway:signal:route!~"
+                  "railway:signal:main!~yes",
+			      "railway:signal:route!~yes"
                 ]
               },
              {
 			   "and": [
-                  "railway:signal:main!~",
-			      "railway:signal:shunting!~"
+                  "railway:signal:main!~yes",
+			      "railway:signal:shunting!~yes"
                 ]
               },
              {
 			   "and": [
-                  "railway:signal:main!~",
-			      "railway:signal:route!~",
-				  "railway:signal:shunting!~"
+                  "railway:signal:main!~yes",
+			      "railway:signal:route!~yes",
+				  "railway:signal:shunting!~yes"
                 ]
               }			  
 		    ]
@@ -850,7 +850,22 @@
               }			  
 		    ]
 		  }
-        }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "Note: {note}",
+            "es": "Nota: {note}"
+          },
+          "question": {
+            "es": "¿Quiere dejar una nota?"
+          },
+          "freeform": {
+            "key": "note",
+            "type": "text"
+          },
+          "condition": {}
+		}
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
