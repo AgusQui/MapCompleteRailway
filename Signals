@@ -728,7 +728,8 @@
             "key": "ref",
             "type": "text"
           },
-          "condition": {},
+          "condition": {}
+        },
         {
           "mappings": [],
           "render": {
