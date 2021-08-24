@@ -1925,92 +1925,132 @@
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "La referencia de la señal principal"
+            "en": "ref {ref}",
+            "es": "La señal tiene cód {ref}"
+          },
+          "question": {
+            "es": "¿Cual es el único código de referencia de la señal?"
+          },
+          "freeform": {
+            "key": "ref",
+            "type": "text"
+          },
+          "condition": {}
+        },
+        {
+          "mappings": [],
+          "render": {
+            "en": "main ref {railway:signal:main:ref}",
+            "es": "La señal principal tiene cód {railway:signal:main:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal principal?"
           },
           "freeform": {
-            "key": "railway:signal:main:ref"
+            "key": "railway:signal:main:ref",
+            "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:main=yes"
-            ]
-          }
-        },{
-          "mappings": [],
-          "render": {
-            "en": "{key}",
-            "es": "Referencia de la señal principal repetida"
-          },
-          "question": {
-            "es": "¿Cual es el código de referencia de la señal principal repetida?"
-          },
-          "freeform": {
-            "key": "railway:signal:main_repeated:ref"
-          },
-          "condition": {
-            "and": [
-              "railway:signal:main_repeated=yes"
-            ]
-          }
+		   "or": [
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:shunting=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes",
+				  "railway:signal:shunting=yes"
+                ]
+              }			  
+		    ]
+		  }
         },
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "Referencia de la señal combinada"
-          },
-          "question": {
-            "es": "¿Cual es el código de referencia de la señal combinada?"
-          },
-          "freeform": {
-            "key": "railway:signal:combined:ref"
-          },
-          "condition": {
-            "and": [
-              "railway:signal:combined=yes"
-            ]
-          }
-        },
-        {
-          "mappings": [],
-          "render": {
-            "en": "{key}",
-            "es": "Referencia señal de desvío"
+            "en": "route ref {railway:signal:route:ref}",
+            "es": "La señal de desvío tiene código {railway:signal:route:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal de desvío?"
           },
           "freeform": {
-            "key": "railway:signal:route:ref"
+            "key": "railway:signal:route:ref",
+            "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:route=yes"
+            "or": [
+             {
+              "and": [
+               "railway:signal:main=yes",
+               "railway:signal:route=yes"
+              ]
+             },
+             {
+              "and": [
+               "railway:signal:main=yes",
+               "railway:signal:route=yes",
+               "railway:signal:shunting=yes"
+              ]
+             }
             ]
           }
         },
         {
           "mappings": [],
           "render": {
-            "en": "{key}",
-            "es": "{Referencia de la señal de maniobras}"
+            "en": "shunting ref {railway:signal:shunting:ref}",
+            "es": "La señal de maniobras tiene código {railway:signal:shunting:ref}"
           },
           "question": {
             "es": "¿Cual es el código de referencia de la señal de maniobras?"
           },
           "freeform": {
-            "key": "railway:signal:shunting:ref"
+            "key": "railway:signal:shunting:ref",
+            "type": "text"
           },
           "condition": {
-            "and": [
-              "railway:signal:shunting=yes"
-            ]
-          }
-        }
+		   "or": [
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:shunting=yes"
+                ]
+              },
+             {
+			   "and": [
+                  "railway:signal:main=yes",
+			      "railway:signal:route=yes",
+				  "railway:signal:shunting=yes"
+                ]
+              }			  
+		    ]
+		  }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "Note: {note}",
+            "es": "Nota: {note}"
+          },
+          "question": {
+            "es": "¿Quiere dejar una nota?"
+          },
+          "freeform": {
+            "key": "note",
+            "type": "text"
+          },
+          "condition": {}
+		}
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
@@ -2565,7 +2605,22 @@
               "railway:signal:stop=yes"
             ]
           }
-        }
+        },
+		{
+          "mappings": [],
+          "render": {
+            "en": "Note: {note}",
+            "es": "Nota: {note}"
+          },
+          "question": {
+            "es": "¿Quiere dejar una nota?"
+          },
+          "freeform": {
+            "key": "note",
+            "type": "text"
+          },
+          "condition": {}
+		}
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
