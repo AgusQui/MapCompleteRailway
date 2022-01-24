@@ -30,7 +30,7 @@
         "en": "signals",
         "es": "Señales de tráfico"
       },
-      "minzoom": 15,
+      "minzoom": 16,
       "overpassTags": {
         "and": [
           "railway=signal",
@@ -1266,7 +1266,7 @@
         "en": "Disused signals",
         "es": "Señales abandonadas"
       },
-      "minzoom": 13,
+      "minzoom": 16,
       "overpassTags": {
         "and": [
           "disused:railway=signal"
@@ -2306,7 +2306,7 @@
         "en": "Signs",
         "es": "Tableros indicadores"
       },
-      "minzoom": 13,
+      "minzoom": 16,
       "overpassTags": {
         "and": [
           "railway=signal",
