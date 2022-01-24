@@ -30,7 +30,7 @@
         "en": "signals",
         "es": "Señales de tráfico"
       },
-      "minzoom": 13,
+      "minzoom": 15,
       "overpassTags": {
         "and": [
           "railway=signal",
@@ -2082,6 +2082,14 @@
       },
       "color": {
         "render": "#00f"
+      },
+      "label": {
+        "mappings": [
+          {
+            "if": "ref~*",
+            "then": "<div style='background: white; padding: 0.15em; border-radius:0.5em'>{ref}</div>"
+          }
+        ]
       },
       "presets": [
         {
