@@ -1,5 +1,5 @@
 {
-  "id": "railwayarg",
+  "id": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/railway",
   "title": {
     "es": "FC Sarmiento",
     "en": "FC Sarmiento"
@@ -153,8 +153,9 @@
           },
           "render": {
             "es": "{crossing:bell}",
-			"en": "{crossing:bell}"
-          }
+            "en": "{crossing:bell}"
+          },
+          "id": "crossings-crossing:bell"
         },
         {
           "freeform": {
@@ -189,7 +190,8 @@
           },
           "question": {
             "es": "¿Tiene advertencia luminosa?"
-          }
+          },
+          "id": "crossings-crossing:light"
         },
         {
           "freeform": {
@@ -229,7 +231,8 @@
             "and": [
               "railway=level_crossing"
             ]
-          }
+          },
+          "id": "crossings-crossing:saltire"
         },
         {
           "freeform": {
@@ -269,7 +272,8 @@
             "and": [
               "railway=crossing"
             ]
-          }
+          },
+          "id": "crossings-crossing:chicane"
         },
         {
           "freeform": {
@@ -304,7 +308,8 @@
           },
           "question": {
             "es": "¿Tiene banderillero?"
-          }
+          },
+          "id": "crossings-supervised"
         },
         {
           "question": {
@@ -365,7 +370,8 @@
           "render": {
             "en": "{crossing:barrier}",
             "es": "{crossing:barrier}"
-          }
+          },
+          "id": "crossings-crossing:barrier"
         },
         {
           "freeform": {
@@ -394,7 +400,8 @@
               "crossing:light=no",
               "crossing:bell=no"
             ]
-          }
+          },
+          "id": "crossings-crossing"
         },
         {
           "question": {
@@ -462,7 +469,8 @@
           "render": {
             "en": "{crossing:activation}",
             "es": "{crossing:activation}"
-          }
+          },
+          "id": "crossings-crossing:activation"
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
@@ -563,7 +571,8 @@
           ],
           "freeform": {
             "key": "railway:switch"
-          }
+          },
+          "id": "switches-railway:switch"
         },
         {
           "freeform": {
@@ -601,7 +610,8 @@
             "or": [
               "railway:switch="
             ]
-          }
+          },
+          "id": "switches-railway:turnout_side"
         },
         {
           "freeform": {
@@ -634,7 +644,8 @@
           ],
           "render": {
             "es": "{railway:switch:electric}"
-          }
+          },
+          "id": "switches-railway:switch:electric"
         },
         {
           "freeform": {
@@ -667,7 +678,8 @@
           ],
           "render": {
             "es": "{railway:switch:local_operated}"
-          }
+          },
+          "id": "switches-railway:switch:local_operated"
         },
         {
           "render": {
@@ -706,7 +718,8 @@
               "railway:switch=single_slip",
               "railway:switch=double_slip"
             ]
-          }
+          },
+          "id": "switches-railway:switch:configuration"
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
@@ -721,10 +734,7 @@
                 "railway:switch:electric!~"
               ]
             },
-            "then": {
-              "en": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg",
-              "es": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg"
-            }
+            "then": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg"
           },
           {
             "if": {
@@ -734,10 +744,7 @@
                 "railway:switch:electric!~"
               ]
             },
-            "then": {
-              "es": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg",
-              "en": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg"
-            }
+            "then": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg"
           },
           {
             "if": {
@@ -748,10 +755,7 @@
                 "railway:switch:configuration!~"
               ]
             },
-            "then": {
-              "en": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg",
-              "es": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg"
-            }
+            "then": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg"
           },
           {
             "if": {
@@ -762,10 +766,7 @@
                 "railway:switch:configuration!~"
               ]
             },
-            "then": {
-              "en": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg",
-              "es": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg"
-            }
+            "then": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg"
           },
           {
             "if": {
@@ -775,10 +776,7 @@
                 "railway:switch:electric!~"
               ]
             },
-            "then": {
-              "en": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg",
-              "es": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg"
-            }
+            "then": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg"
           }
         ]
       },
