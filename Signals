@@ -1048,18 +1048,6 @@
       },
       "label": {
         "mappings": [
-          {
-            "if": "ref~*",
-            "then": "<div style='background: white; padding: 0.15em; border-radius:0.5em'>{ref}</div>"
-          },
-          {
-            "if": "railway:signal:main:ref~*",
-            "then": "<div style='background: white; padding: 0.15em; border-radius:0.5em'>{railway:signal:main:ref}</div>"
-          },
-          {
-            "if": "railway:signal:shunting:ref~*",
-            "then": "<div style='background: white; padding: 0.15em; border-radius:0.5em'>{railway:signal:shunting:ref}</div>"
-          }
         ]
       },
       "presets": [
