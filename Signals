@@ -93,7 +93,7 @@
           },
           "freeform": {
             "key": "railway:signal:speed_limit:speed",
-            "type": "text"
+            "type": "nat"
           },
           "condition": {
             "and": [
@@ -114,13 +114,9 @@
           },
           "freeform": {
             "key": "railway:signal:stop:caption",
-            "type": "text"
+            "type": "nat"
           },
-          "condition": {
-            "and": [
-              "railway:signal:stop=yes"
-            ]
-          },
+          "condition": {},
           "id": "signs-railway:signal:stop:caption"
         },
         {
