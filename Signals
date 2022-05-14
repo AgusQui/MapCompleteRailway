@@ -80,7 +80,275 @@
         ]
       },
       "description": {},
-      "tagRenderings": [],
+      "tagRenderings": [
+        {
+          "freeform": {
+            "addExtraTags": [],
+            "key": "railway:signal:position"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:position=left"
+                ]
+              },
+              "then": {
+                "es": "Esta ubicado a la izquierda de la vía"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:position=right"
+                ]
+              },
+              "then": {
+                "es": "Esta ubicado a la derecha de la vía"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:position=bridge"
+                ]
+              },
+              "then": {
+                "es": "Esta ubicado en un pórtico"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:position=overhead"
+                ]
+              },
+              "then": {
+                "es": "Esta colgado de la catenaria"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:position=in_track"
+                ]
+              },
+              "then": {
+                "es": "Esta ubicado entre los rieles"
+              }
+            }
+          ],
+          "render": {
+            "en": "{railway:signal:position}",
+            "es": "{railway:signal:position}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Dónde se encuentra?"
+          },
+          "id": "signs-railway:signal:position"
+        },
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:whistle:height=normal"
+                ]
+              },
+              "then": {
+                "es": "La señal de silbe tiene una altura normal"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:whistle:height=dwarf"
+                ]
+              },
+              "then": {
+                "es": "La señal de silbe es enana"
+              }
+            }
+          ],
+          "render": {
+            "en": "{railway:signal:whistle:height}",
+            "es": "{railway:signal:whistle:height}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Cual es la altura del indicador de silbe?"
+          },
+          "freeform": {
+            "key": "railway:signal:whistle:height"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:whistle=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
+            ]
+          },
+          "id": "signs-railway:signal:whistle:height"
+        },
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:speed_limit:height=normal"
+                ]
+              },
+              "then": {
+                "es": "El indicador de velocidad tiene una altura normal"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:speed_limit:height=dwarf"
+                ]
+              },
+              "then": {
+                "es": "Es un indicador de velocidad enana."
+              }
+            }
+          ],
+          "render": {
+            "en": "{railway:signal:speed_limit:height}",
+            "es": "{railway:signal:speed_limit:height}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Cual es la altura del indicador de velocidad?"
+          },
+          "freeform": {
+            "key": "railway:signal:speed_limit:height"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:speed_limit=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
+            ]
+          },
+          "id": "signs-railway:signal:speed_limit:height"
+        },
+        {
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:stop:height=normal"
+                ]
+              },
+              "then": {
+                "es": "La marca de detención tiene altura normal."
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:stop:height=dwarf"
+                ]
+              },
+              "then": {
+                "es": "Es una marca de detención enana"
+              }
+            }
+          ],
+          "render": {
+            "en": "{railway:signal:stop:height}",
+            "es": "{railway:signal:stop:height}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿A que altura está la marca de detención?"
+          },
+          "freeform": {
+            "key": "railway:signal:stop:height"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:stop=yes",
+              {
+                "or": [
+                  "railway:signal:position=right",
+                  "railway:signal:position=left"
+                ]
+              }
+            ]
+          },
+          "id": "signs-railway:signal:stop:height"
+        },
+        {
+          "mappings": [],
+          "render": {
+            "en": "Maxspeed {railway:signal:speed_limit:speed}",
+            "es": "Velocidad máxima {railway:signal:speed_limit:speed}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Cual es la velocidad máxima?"
+          },
+          "freeform": {
+            "key": "railway:signal:speed_limit:speed",
+            "type": "nat"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:speed_limit=yes"
+            ]
+          },
+          "id": "signs-railway:signal:speed_limit:speed"
+        },
+        {
+          "mappings": [],
+          "render": {
+            "en": "Stop for {railway:signal:stop:caption} wagons",
+            "es": "Detención para {railway:signal:stop:caption} coches"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Cuántos coches se indica?"
+          },
+          "freeform": {
+            "key": "railway:signal:stop:caption",
+            "type": "nat"
+          },
+          "condition": {
+            "and": [
+              "railway:signal:stop=yes"
+            ]
+          },
+          "id": "signs-railway:signal:stop:caption"
+        },
+        {
+          "mappings": [],
+          "render": {
+            "en": "Note: {note}",
+            "es": "Nota: {note}"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Quiere dejar una nota?"
+          },
+          "freeform": {
+            "key": "note",
+            "type": "text"
+          },
+          "condition": {},
+          "id": "signs-note"
+        }
+      ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
         "render": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/Signals.png",
