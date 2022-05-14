@@ -84,6 +84,43 @@
         {
           "freeform": {
             "addExtraTags": [],
+            "key": "railway:signal:direction"
+          },
+          "question": {
+            "en": "",
+            "es": "¿Hacia que dirección se mira esta señal?"
+          },
+          "render": {
+            "en": "{railway:signal:direction}",
+            "es": "{railway:signal:direction}"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "railway:signal:direction=ESTE"
+                ]
+              },
+              "then": {
+                "es": "Dirección ESTE"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "railway:signal:direction=OESTE"
+                ]
+              },
+              "then": {
+                "es": "Dirección OESTE"
+              }
+            }
+          ],
+          "id": "signs-railway:signal:direction"
+        },
+        {
+          "freeform": {
+            "addExtraTags": [],
             "key": "railway:signal:position"
           },
           "mappings": [
@@ -147,53 +184,6 @@
             "es": "¿Dónde se encuentra?"
           },
           "id": "signs-railway:signal:position"
-        },
-        {
-          "mappings": [
-            {
-              "if": {
-                "and": [
-                  "railway:signal:whistle:height=normal"
-                ]
-              },
-              "then": {
-                "es": "La señal de silbe tiene una altura normal"
-              }
-            },
-            {
-              "if": {
-                "and": [
-                  "railway:signal:whistle:height=dwarf"
-                ]
-              },
-              "then": {
-                "es": "La señal de silbe es enana"
-              }
-            }
-          ],
-          "render": {
-            "en": "{railway:signal:whistle:height}",
-            "es": "{railway:signal:whistle:height}"
-          },
-          "question": {
-            "en": "",
-            "es": "¿Cual es la altura del indicador de silbe?"
-          },
-          "freeform": {
-            "key": "railway:signal:whistle:height"
-          },
-          "condition": {
-            "and": [
-              "railway:signal:whistle=yes",
-              {
-                "or": [
-                  "railway:signal:position=right",
-                  "railway:signal:position=left"
-                ]
-              }
-            ]
-          },
-          "id": "signs-railway:signal:whistle:height"
         },
         {
           "mappings": [
