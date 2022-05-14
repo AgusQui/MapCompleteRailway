@@ -96,7 +96,7 @@
             "type": "nat"
           },
           "condition": {
-            "and": [
+            "or": [
               "railway:signal:speed_limit=yes"
             ]
           },
