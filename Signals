@@ -707,9 +707,7 @@
           "freeform": {
             "key": "railway:signal:minor:caption"
           },
-          "condition": {
-            "railway:signal:minor=yes"
-          },
+          "condition": "railway:signal:minor=yes",
           "id": "signals-railway:signal:minor:caption"
         },
         {
@@ -725,9 +723,7 @@
           "freeform": {
             "key": "railway:signal:route:caption"
           },
-          "condition": {
-            "railway:signal:route=yes"
-          },
+          "condition": "railway:signal:route=yes",
           "id": "signals-railway:signal:route:caption"
         },
         {
@@ -1918,9 +1914,7 @@
           "freeform": {
             "key": "railway:signal:minor:caption"
           },
-          "condition": {
-            "railway:signal:minor=yes"
-          },
+          "condition": "railway:signal:minor=yes",
           "id": "disusedsignal-railway:signal:minor:caption"
         },
         {
@@ -1936,9 +1930,7 @@
           "freeform": {
             "key": "railway:signal:route:caption"
           },
-          "condition": {
-            "railway:signal:route=yes"
-          },
+          "condition": "railway:signal:route=yes",
           "id": "disusedsignal-railway:signal:route:caption"
         },
         {
@@ -2627,9 +2619,7 @@
             "key": "railway:signal:speed_limit:speed",
             "type": "nat"
           },
-          "condition": {
-     	    "railway:signal:speed_limit=yes"
-          },
+          "condition": "railway:signal:speed_limit=yes",
           "id": "signs-railway:signal:speed_limit:speed"
         },
         {
@@ -2646,9 +2636,7 @@
             "key": "railway:signal:stop:caption",
             "type": "nat"
           },
-          "condition": {
-            "railway:signal:stop=yes"
-          },
+          "condition": "railway:signal:stop=yes",
           "id": "signs-railway:signal:stop:caption"
         },
         {
