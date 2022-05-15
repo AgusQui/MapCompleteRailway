@@ -95,11 +95,7 @@
             "key": "railway:signal:speed_limit:speed",
             "type": "nat"
           },
-          "condition": {
-            "or": [
-              "railway:signal:speed_limit=yes"
-            ]
-          },
+          "condition": {},
           "id": "signs-railway:signal:speed_limit:speed"
         },
         {
