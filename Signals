@@ -95,7 +95,6 @@
             "key": "railway:signal:speed_limit:speed",
             "type": "nat"
           },
-          "condition": {},
           "id": "signs-railway:signal:speed_limit:speed"
         },
         {
