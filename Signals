@@ -111,7 +111,6 @@
             "key": "railway:signal:stop:caption",
             "type": "nat"
           },
-          "condition": {},
           "id": "signs-railway:signal:stop:caption"
         },
         {
@@ -128,7 +127,6 @@
             "key": "note",
             "type": "text"
           },
-          "condition": {},
           "id": "signs-note"
         }
       ],
