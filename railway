@@ -729,8 +729,7 @@
           {
             "if": {
               "and": [
-                "railway:turnout_side=right",
-                "railway:switch:local_operated!~",
+                "railway:turnout_side=right
                 "railway:switch:electric!~"
               ]
             },
