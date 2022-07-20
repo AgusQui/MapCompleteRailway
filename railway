@@ -733,7 +733,7 @@
             "if": {
               "and": [
                 "railway:turnout_side=right",
-                "railway:switch:electric!~"
+                "railway:switch:electric="
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg"
