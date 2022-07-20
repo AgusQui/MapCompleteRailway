@@ -1,4 +1,3 @@
-
 {
   "id": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/railway",
   "title": {
@@ -616,11 +615,11 @@
         },
         {
           "freeform": {
-   "addExtraTags": [],
+		    "addExtraTags": [],
             "key": "railway:switch:electric"
           },
           "question": {
-   "en": ""
+		    "en": ""
             "es": "¿Es eléctrico?"
           },
           "mappings": [
@@ -646,7 +645,7 @@
             }
           ],
           "render": {
-   "en": ""
+		    "en": ""
             "es": "{railway:switch:electric}"
           },
           "id": "switches-railway:switch:electric"
