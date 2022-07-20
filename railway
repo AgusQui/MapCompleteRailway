@@ -619,7 +619,7 @@
             "key": "railway:switch:electric"
           },
           "question": {
-		    "en": ""
+		    "en": "",
             "es": "¿Es eléctrico?"
           },
           "mappings": [
@@ -645,7 +645,7 @@
             }
           ],
           "render": {
-		    "en": ""
+		    "en": "",
             "es": "{railway:switch:electric}"
           },
           "id": "switches-railway:switch:electric"
