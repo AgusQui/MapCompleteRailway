@@ -16,7 +16,7 @@
     "en",
     "es"
   ],
-  "maintainer": "",
+  "maintainer": "AgusQui",
   "icon": "https://upload.wikimedia.org/wikipedia/commons/2/23/BSicon_BAHN.svg",
   "version": "0",
   "startLat": -34.6504,
@@ -645,7 +645,7 @@
             }
           ],
           "render": {
-		    "en": "",
+		    "en": "{railway:switch:electric}",
             "es": "{railway:switch:electric}"
           },
           "id": "switches-railway:switch:electric"
