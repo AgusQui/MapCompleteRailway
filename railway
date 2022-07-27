@@ -763,9 +763,9 @@
             "if": {
               "and": [
                 "railway:switch=double_slip",
-                "railway:switch:local_operated=",
-                "railway:switch:electric=",
-                "railway:switch:configuration="
+                "railway:switch:local_operated~*",
+                "railway:switch:electric=~*",
+                "railway:switch:configuration~*"
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BSicon_uKRZl%2Br.svg"
