@@ -764,7 +764,7 @@
               "and": [
                 "railway:switch=double_slip",
                 "railway:switch:local_operated~*",
-                "railway:switch:electric=~*",
+                "railway:switch:electric~*",
                 "railway:switch:configuration~*"
               ]
             },
