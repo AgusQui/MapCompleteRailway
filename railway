@@ -733,7 +733,8 @@
             "if": {
               "and": [
                 "railway:turnout_side=right",
-                "railway:switch:electric="
+				"railway:switch:local_operated~*",
+                "railway:switch:electric~*"
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/6/6b/BSicon_uABZg%2Bl.svg"
@@ -742,8 +743,8 @@
             "if": {
               "and": [
                 "railway:turnout_side=left",
-                "railway:switch:local_operated=",
-                "railway:switch:electric="
+                "railway:switch:local_operated~*",
+                "railway:switch:electric~*"
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/5/51/BSicon_uABZg%2Br.svg"
@@ -752,9 +753,9 @@
             "if": {
               "and": [
                 "railway:switch=single_slip",
-                "railway:switch:local_operated=",
-                "railway:switch:electric=",
-                "railway:switch:configuration="
+                "railway:switch:local_operated~*",
+                "railway:switch:electric~*",
+                "railway:switch:configuration~*"
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BSicon_uKRZl.svg"
@@ -774,8 +775,8 @@
             "if": {
               "and": [
                 "railway:switch=wye",
-                "railway:switch:local_operated=",
-                "railway:switch:electric="
+                "railway:switch:local_operated~*",
+                "railway:switch:electric~*"
               ]
             },
             "then": "https://upload.wikimedia.org/wikipedia/commons/f/fe/BSicon_uABZ%2B14.svg"
