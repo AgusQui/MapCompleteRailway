@@ -586,7 +586,7 @@
                 ]
               },
               "then": {
-                "es": "Cambio derecho"
+                "es": "Desvía derecha"
               }
             },
             {
@@ -596,7 +596,7 @@
                 ]
               },
               "then": {
-                "es": "Izquierda"
+                "es": "Desvía Izquierda"
               }
             }
           ],
