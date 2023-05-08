@@ -1,16 +1,16 @@
 {
   "id": "https://raw.githubusercontent.com/AgusQui/MapCompleteRailway/main/railway",
   "title": {
-    "es": "FC Sarmiento",
-    "en": "FC Sarmiento"
+    "es": "Detalles de Ferrocarril",
+    "en": "Railways Details "
   },
   "shortDescription": {
-    "es": "Linea Sarmiento",
-    "en": "Sarmiento Line"
+    "es": "cruces a nivel, cambios de FC",
+    "en": "Railway crossings, switches"
   },
   "description": {
-    "es": "Para mejorar el mapeo de infraestructura ferroviaria de la línea Sarmiento en AMBA Argentina, como señales, cambios, etc",
-    "en": "To improve the mapping of railway infrastructure of the Sarmiento line in AMBA Argentina, such as signals, changes, etc."
+    "es": "Para mejorar el mapeo de infraestructura ferroviaria como cruces a nivel, cambios, etc",
+    "en": "To improve the mapping of railway infrastructure such as crossings, switches, etc."
   },
   "language": [
     "en",
