@@ -723,6 +723,22 @@
             ]
           },
           "id": "switches-railway:switch:configuration"
+        },
+		{
+          "freeform": {
+            "key": "ref",
+            "type": "text"
+          },
+          "question": {
+			"en": "",
+            "es": "¿Cuál es la referencia designada?"
+          },
+          "mappings": [],
+          "render": {
+			"en": "ref {ref}",
+            "es": "El desvío tiene código{ref}"
+          },
+          "id": "switches-railway:switch:ref"
         }
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
@@ -792,6 +808,14 @@
       "color": {
         "render": "#00f"
       },
+      "label": {
+        "mappings": [
+          {
+            "if": "ref~*",
+            "then": "<div style='background: white; padding: 0.15em; border-radius:0.5em'>{ref}</div>"
+          }
+		]
+	  },
       "presets": []
     },
     {
