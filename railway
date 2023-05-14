@@ -730,13 +730,13 @@
             "type": "text"
           },
           "question": {
-			"en": "",
+            "en": "",
             "es": "¿Cuál es la referencia designada?"
           },
           "mappings": [],
           "render": {
-			"en": "ref {ref}",
-            "es": "El desvío tiene código{ref}"
+            "en": "ref {ref}",
+            "es": "El desvío tiene código {ref}"
           },
           "id": "switches-railway:switch:ref"
         }
