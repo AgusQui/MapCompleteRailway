@@ -652,7 +652,7 @@
         },
         {
           "freeform": {
-            "key": "railway:switch:local_operated"
+            "key": "railway:local_operated"
           },
           "question": {
             "es": "¿Cómo se acciona?"
@@ -661,7 +661,7 @@
             {
               "if": {
                 "and": [
-                  "railway:switch:local_operated=yes"
+                  "railway:local_operated=yes"
                 ]
               },
               "then": {
@@ -671,7 +671,7 @@
             {
               "if": {
                 "and": [
-                  "railway:switch:local_operated=no"
+                  "railway:local_operated=no"
                 ]
               },
               "then": {
@@ -680,9 +680,9 @@
             }
           ],
           "render": {
-            "es": "{railway:switch:local_operated}"
+            "es": "{railway:local_operated}"
           },
-          "id": "switches-railway:switch:local_operated"
+          "id": "switches-railway:local_operated"
         },
         {
           "render": {
@@ -749,7 +749,7 @@
             "if": {
               "and": [
                 "railway:turnout_side=right",
-				"railway:switch:local_operated~*",
+				"railway:local_operated~*",
                 "railway:switch:electric~*"
               ]
             },
@@ -759,7 +759,7 @@
             "if": {
               "and": [
                 "railway:turnout_side=left",
-                "railway:switch:local_operated~*",
+                "railway:local_operated~*",
                 "railway:switch:electric~*"
               ]
             },
@@ -769,7 +769,7 @@
             "if": {
               "and": [
                 "railway:switch=single_slip",
-                "railway:switch:local_operated~*",
+                "railway:local_operated~*",
                 "railway:switch:electric~*",
                 "railway:switch:configuration~*"
               ]
@@ -780,7 +780,7 @@
             "if": {
               "and": [
                 "railway:switch=double_slip",
-                "railway:switch:local_operated~*",
+                "railway:local_operated~*",
                 "railway:switch:electric~*",
                 "railway:switch:configuration~*"
               ]
@@ -791,7 +791,7 @@
             "if": {
               "and": [
                 "railway:switch=wye",
-                "railway:switch:local_operated~*",
+                "railway:local_operated~*",
                 "railway:switch:electric~*"
               ]
             },
